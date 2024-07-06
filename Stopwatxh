@@ -3,32 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stopwatch App</title>
+<title>STOPWATCH APP</title>
 <style>
-    body {
-        font-family: BankGothic Lt BT, fantasy;
-        text-align: center;
-        background-color: #f5f5f5;
-    }
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    .container {
-        margin: 50px auto;
-        width: 300px;
+body {
+    background: linear-gradient(to right, #ffecd2, #9400d3);
+    font-family:  BankGothic Md BT, Fantasy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size:  5rem; /* Adjusted font size */
+    margin-bottom: 30px; /* Adjusted margin */
+    color: #333;
+}
+
+#timer {
+    font-size: 4rem; /* Adjusted font size */
+    margin-bottom: 30px; /* Adjusted margin */
+    color: #9400d3; /* Match digit color to button background */
+}
+
+button {
+    background-color: #9400d3;
+    color: #fff;
+    border: none;
+    padding: 30px 60px; /* Adjusted padding */
+    font-size: 2.5rem; /* Adjusted font size */
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+button:disabled {
+    background-color: #ccc; /* Adjusted disabled button color */
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
     }
 
     #timer {
-        font-size: 36px;
-        padding: 10px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        margin-bottom: 20px;
+        font-size: 2.5rem;
+    }
+
+    button {
+        padding: 20px 40px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #timer {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #timer {
+        font-size: 1.5rem;
     }
 
     button {
         padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
+        font-size: 1rem;
     }
+}
 </style>
 </head>
 <body>
